@@ -15,7 +15,6 @@ print("Sensor Data App")
 # Module 1 code here:
 data = load_sensor_data()
 print("Loaded records: {}".format(len(data)))
-
 # Module 2 code here:
 house_info = HouseInfo(data)
 test_area = 1
@@ -33,5 +32,9 @@ print("\nHouse Temperature sensor records for area {} = {}".format(test_area, le
 print("\tMaximum: {0}, Minimum: {1} temperatures".format(max(recs), min(recs)))
 
 # Module 4 code here:
+recs = temperature_data.get_data_by_date(rec_date=test_date)
+print("\nHouse Temperature sensor records for date: {} = {}".format(
+    test_date.strftime("%m/%d/%y"), len(recs)))
+print("\tMaximum: {0}, Minimum: {1} temperatures".format(max(recs), min(recs)))
 
 # Module 5 code here:
